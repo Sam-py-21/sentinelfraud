@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.git/
+.gitignore
+notebooks/
+tests/
+*.ipynb
+*.parquet
+.env
+.vscode/

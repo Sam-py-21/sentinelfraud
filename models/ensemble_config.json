@@ -1,0 +1,11 @@
+{
+  "best_strategy": "xgboost_only",
+  "weights": {
+    "xgb": 0.6,
+    "rf": 0.25,
+    "ae": 0.15
+  },
+  "ensemble_threshold": 0.6612995302067524,
+  "xgb_threshold": 0.5,
+  "ae_threshold": 7.671716690063477
+}
