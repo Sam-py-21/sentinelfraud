@@ -21,7 +21,6 @@ RUN pip install --no-cache-dir --upgrade pip && \
 COPY src/ ./src/
 COPY api/ ./api/
 COPY models/ ./models/
-COPY data/raw/ ./data/raw/
 
 # Expose FastAPI port
 EXPOSE 8000
