@@ -8,7 +8,7 @@ Hybrid fraud detection using XGBoost, Random Forest, and a PyTorch Autoencoder w
 
 
 
-![SentinelFraud Chat UI](docs/screenshots/chat.png)
+![SentinelFraud Chat UI](docs/screenshots/chat-main.png)
 ---
 
 ## Problem
