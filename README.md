@@ -2,8 +2,13 @@
 
 Hybrid fraud detection using XGBoost, Random Forest, and a PyTorch Autoencoder with SHAP explainability.
 
-**Live Demo:** *(URL added after deployment)*
+**🔗 Live Demo:** [sentinelfraud.streamlit.app](https://sentinelfraud.streamlit.app)  
+**📖 API Docs:** [sentinelfraud.onrender.com/docs](https://sentinelfraud.onrender.com/docs)
 
+
+
+
+![SentinelFraud Chat UI](docs/screenshots/chat.png)
 ---
 
 ## Problem
@@ -33,6 +38,24 @@ Final scores are combined with weights (XGBoost 0.60, Random Forest 0.25, Autoen
 | **Weighted Ensemble** | 0.8181 | 0.7579 | **0.9730** | **0.8521** |
 
 The ensemble wins on F1 and Precision. Only 2.7% of its fraud alerts are false positives, compared to 6.4% for XGBoost alone.
+
+
+---
+
+## LLM-Powered Chat Interface
+
+Natural-language interface powered by **Google Gemini 3.8 Flash** with **function calling**. Ask questions in plain English:
+
+> *"Check this transaction for fraud: Time=406, Amount=149.62, V1=-1.36, ..."*
+
+The LLM:
+1. Parses the natural-language message
+2. Decides which tool to call (`predict_tool` or `explain_tool`)
+3. Executes the tool against the real ML ensemble
+4. Returns SHAP-grounded explanations
+
+**Live UI:** [sentinelfraud.streamlit.app](https://sentinelfraud.streamlit.app)
+
 
 ### Top fraud drivers (SHAP)
 
