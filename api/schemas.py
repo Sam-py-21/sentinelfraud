@@ -68,3 +68,15 @@ class MetricsResponse(BaseModel):
     best_model: str
     selection_metric: str
     models: Dict[str, dict]
+
+
+class ChatRequest(BaseModel):
+    """Request body for /chat."""
+    message: str = Field(..., description="Natural language question")
+
+
+class ChatResponse(BaseModel):
+    """Response from /chat."""
+    reply: str
+    tool_calls: list
+    raw_tool_results: list

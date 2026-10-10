@@ -11,6 +11,13 @@ from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 
 from .schemas import (
+    Transaction, PredictionResponse, ExplainResponse, MetricsResponse,
+    ChatRequest, ChatResponse,
+)
+from .chat import chat
+
+
+from .schemas import (
     Transaction,
     PredictionResponse,
     ExplainResponse,
@@ -68,3 +75,11 @@ def explain(tx: Transaction):
 def metrics():
     """Return performance metrics of every trained model."""
     return get_metrics()
+
+@app.post("/chat", response_model=ChatResponse)
+def chat_endpoint(req: ChatRequest):
+    """Natural-language interface for fraud analysis."""
+    try:
+        return chat(req.message)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Chat failed: {e}")
