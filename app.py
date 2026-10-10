@@ -101,7 +101,7 @@ if prompt:
                 r = requests.post(
                     f"{API_URL}/chat",
                     json={"message": prompt},
-                    timeout=120,
+                    timeout=300,
                 )
                 if r.status_code == 200:
                     data = r.json()
