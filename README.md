@@ -63,7 +63,7 @@ The LLM:
 
 **Live UI:** [sentinelfraud.streamlit.app](https://sentinelfraud.streamlit.app)
 
-![SHAP Explanation](docs/screenshots/chat-shap.png)
+![SHAP Explanation](docs/screenshots/swagger.png)
 
 ---
 
