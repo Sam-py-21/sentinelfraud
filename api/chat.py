@@ -199,8 +199,10 @@ def chat(message: str) -> dict:
                 result = TOOL_REGISTRY[fn_name](**fn_args)
                 tool_results.append({"name": fn_name, "result": result})
                 tool_response_parts.append(
-                    types.Part(function_response=types.FunctionResponse(
-                        name=fn_name, response=result,
+                types.Part(function_response=types.FunctionResponse(
+                name=fn_name,
+                id=fc.id,
+                response=result,
                     ))
                 )
             else:
