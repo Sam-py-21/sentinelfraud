@@ -47,6 +47,8 @@ The ensemble wins on F1 and Precision. Only **2.7%** of its fraud alerts are fal
 
 Engineered features `Hour_scaled` and `Amount_scaled` also ranked in the top 10.
 
+![SentinelFraud SHAP](docs/screenshots/chat-shap.png)        
+
 ---
 
 ## LLM-Powered Chat Interface
@@ -63,7 +65,6 @@ The LLM:
 
 **Live UI:** [sentinelfraud.streamlit.app](https://sentinelfraud.streamlit.app)
 
-![SHAP Explanation](docs/screenshots/swagger.png)
 
 ---
 
